@@ -11,7 +11,7 @@
 ### Building and running MinesweeperJS using Docker
 * First, build your image using:
 ````
-docker build -t minesweeperjs
+docker build -t minesweeperjs .
 ````
 * Then start the game and map it to your unused port. Local port 8080 is used for simplicity.
 ````

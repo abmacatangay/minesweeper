@@ -4,12 +4,12 @@
 * Option 1: Go to https://github.com/abmacatangay/minesweeper, then click on < > Code and download as ZIP file. Extract the folder.
 * Option 2: [git clone etc, todo later]
 
-### Application that must be open:
+### Applications that must be open:
 * Docker Desktop 
 * Terminal on the folder MinesweeperJS is located
 
 ### Building and running MinesweeperJS using Docker
-* First, build your image using:
+* On your folder's terminal, build your image using:
 ````
 docker build -t minesweeperjs .
 ````
@@ -27,7 +27,7 @@ docker stop my-game
 ````
 * To run it again,
 ````
-docker run my-game
+docker start my-game
 ````
 * Lastly, to delete the docker image, use the command
 ````
@@ -38,4 +38,4 @@ docker rmi minesweeperjs
 ````
 
 ### View Build on Docker Hub or Docker Desktop
-todotodo
+* todotodo

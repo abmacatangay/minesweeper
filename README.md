@@ -12,16 +12,30 @@
 * First, build your image using:
 ````
 docker build -t minesweeperjs
-
-Then start the game and map it to your unused port. Local port is used for simplicity.
+````
+* Then start the game and map it to your unused port. Local port 8080 is used for simplicity.
+````
 docker run -d -p 8080:3000 --name my-game minesweeperjs
-To view the program, go to your browser and type
+````
+* To view the program, go to your browser and type
+````
 http://localhost:8080
-To shut down the server,
+````
+* To shut down the server,
+````
 docker stop my-game
-
-### Deleting the docker image
-To delete the docker image, use the command
+````
+* To run it again,
+````
+docker run my-game
+````
+* Lastly, to delete the docker image, use the command
+````
+docker rm my-game
+````
+````
+docker rmi minesweeperjs
+````
 
 ### View Build on Docker Hub or Docker Desktop
 todotodo

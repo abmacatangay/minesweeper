@@ -8,13 +8,6 @@
 # https://docs.docker.com/go/dockerfile-reference/
 
 ################################################################################
-# MAINTAINER VS LABEL: Both of these instructions are used to specify metadata about the image, such as the author or maintainer of the image.
-# MAINTAINER is the older instruction and is less flexible than LABEL since it only allows you to specify a single key-value pair of metadata.
-LABEL maintainer="Alyanna" \
-      version="1.0" \
-      description="Minesweeper JS" 
-      
-################################################################################
 # FROM: Pick a base image to serve as the foundation for the other build stages in this file.
 # By specifying the "latest" tag, it will also use whatever happens to be the most recent version of that image when you build your Dockerfile.
 # If reproducibility is important, consider using a versioned tag.
@@ -23,6 +16,13 @@ LABEL maintainer="Alyanna" \
 # -> Looking at the image variants section, alpine is a good choice for a base image because it's small and has the necessary tools to serve static files. 
 FROM node:25-alpine AS base
 
+################################################################################
+# MAINTAINER VS LABEL: Both of these instructions are used to specify metadata about the image, such as the author or maintainer of the image.
+# MAINTAINER is the older instruction and is less flexible than LABEL since it only allows you to specify a single key-value pair of metadata.
+LABEL maintainer="Alyanna" \
+      version="1.0" \
+      description="Minesweeper JS" 
+      
 ################################################################################
 # WORKDIR: Set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
 # -> By setting this to /app, we ensure that all subsequent commands are run in the context of the /app directory in the container.
